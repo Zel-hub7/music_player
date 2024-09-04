@@ -78,11 +78,12 @@ const GenreFilter = styled(FormControl)`
 
 const CreateGenreButton = styled(Button)`
   color: #000;
-  background-color: #efcfa9;
+  background-color: #4CAF50;
   &:hover {
-    background-color: #e3b782;
+    background-color: #45A049;
   }
 `;
+
 
 const SongItem = styled.div`
   display: flex;
@@ -104,7 +105,7 @@ const SongItem = styled.div`
 `;
 
 const SongIcon = styled(MusicNoteIcon)`
-  color: #efcfa9;
+  color: #b8a1d3;
   margin-right: 1.5rem;
   font-size: 2rem;
 `;
@@ -112,21 +113,21 @@ const SongIcon = styled(MusicNoteIcon)`
 const SongTitle = styled.h3`
   margin: 0;
   font-size: 1.25rem;
-  color: #efcfa9;
-  font-weight: 500;
+  color: #b8a1d3;
+  font-weight: 600;
 `;
 
 const SongArtist = styled.p`
   margin: 0.25rem 0;
   font-size: 1rem;
-  color: #bbb;
+  color: #b8a1d3;
   font-weight: 400;
 `;
 
 const SongDetails = styled.p`
   margin: 0;
   font-size: 0.9rem;
-  color: #999;
+  color: white;
 `;
 
 const SongInfoContainer = styled.div`
@@ -307,7 +308,7 @@ const SongList: React.FC<{ onSongChange: () => void }> = ({ onSongChange }) => {
               <IconButton
                 onClick={() => handleUpdateClick(song)}
                 aria-label="edit"
-                style={{ color: "#efcfa9" }}
+                style={{ color: "white" }}
               >
                 <EditIcon />
               </IconButton>
