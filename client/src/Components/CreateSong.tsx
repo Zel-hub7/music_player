@@ -25,75 +25,72 @@ import {
 import { createSongAPI } from "../services/ApiHandler";
 import { RootState } from "../redux/store";
 
-// Styled components for the popup, form fields, and buttons
 const PopupContainer = styled(Box)`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  background-color: #333;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-  color: #fff;
+  width: 420px;
+  background-color: #222;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.6);
+  color: #f0f0f0;
 `;
 
 const FormField = styled(TextField)`
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   width: 100%;
 
   & label {
-    color: #efcfa9;
+    color: #b8a1d3;
   }
 
   & .MuiInputBase-input {
-    color: #fff;
+    color: #d4d4d4;
   }
 
   & .MuiOutlinedInput-notchedOutline {
-    border-color: #efcfa9;
+    border-color: #b8a1d3;
   }
 `;
 
 const ActionButton = styled(Button)`
-  margin-top: 1rem;
-  color: #000;
-  background-color: #efcfa9;
+  margin-top: 1.5rem;
+  color: #ffffff;
+  background-color: #6a3e98;
 
   &:hover {
-    background-color: #e3b782;
+    background-color: #54317a;
   }
 `;
 
 const GenreSelect = styled(FormControl)`
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   width: 100%;
 
   & label {
-    color: #efcfa9;
+    color: #b8a1d3;
   }
 
   & .MuiInputBase-root {
-    color: #fff;
+    color: #d4d4d4;
   }
 
   & .MuiOutlinedInput-notchedOutline {
-    border-color: #efcfa9;
+    border-color: #b8a1d3;
   }
 
   & .MuiSvgIcon-root {
-    color: #efcfa9;
+    color: #b8a1d3;
   }
 `;
 
-// Interface for the props used in the CreateSong component
 interface CreateSongProps {
   onClose: () => void;
   onSave: () => void;
 }
 
-// The main CreateSong component
 const CreateSong = ({ onClose, onSave }: CreateSongProps) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
@@ -134,7 +131,7 @@ const CreateSong = ({ onClose, onSave }: CreateSongProps) => {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <MusicNoteIcon style={{ color: "#efcfa9" }} />
+                <MusicNoteIcon style={{ color: "#b8a1d3" }} />
               </InputAdornment>
             ),
           }}
@@ -148,7 +145,7 @@ const CreateSong = ({ onClose, onSave }: CreateSongProps) => {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <PersonIcon style={{ color: "#efcfa9" }} />
+                <PersonIcon style={{ color: "#b8a1d3" }} />
               </InputAdornment>
             ),
           }}
@@ -162,7 +159,7 @@ const CreateSong = ({ onClose, onSave }: CreateSongProps) => {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <AlbumIcon style={{ color: "#efcfa9" }} />
+                <AlbumIcon style={{ color: "#b8a1d3" }} />
               </InputAdornment>
             ),
           }}
@@ -175,7 +172,7 @@ const CreateSong = ({ onClose, onSave }: CreateSongProps) => {
             label="Genre"
             startAdornment={
               <InputAdornment position="start">
-                <CategoryIcon style={{ color: "#efcfa9" }} />
+                <CategoryIcon style={{ color: "#b8a1d3" }} />
               </InputAdornment>
             }
           >
@@ -191,7 +188,7 @@ const CreateSong = ({ onClose, onSave }: CreateSongProps) => {
           </Select>
         </GenreSelect>
         {loading ? (
-          <CircularProgress style={{ marginTop: "1rem", color: "#efcfa9" }} />
+          <CircularProgress style={{ marginTop: "1.5rem", color: "#b8a1d3" }} />
         ) : (
           <ActionButton onClick={handleSubmit}>Submit</ActionButton>
         )}
