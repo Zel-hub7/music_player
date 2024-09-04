@@ -49,7 +49,7 @@ if (rootElement) {
     <StrictMode>
       <Provider store={store}>
         <ThemeProvider theme={customTheme}>
-      
+          <CssBaseline />
           <App />
         </ThemeProvider>
       </Provider>

@@ -25,6 +25,7 @@ import {
 import { createSongAPI } from "../services/ApiHandler";
 import { RootState } from "../redux/store";
 
+// Styled components for the popup, form fields, and buttons
 const PopupContainer = styled(Box)`
   position: absolute;
   top: 50%;
@@ -86,11 +87,13 @@ const GenreSelect = styled(FormControl)`
   }
 `;
 
+// Interface for the props used in the CreateSong component
 interface CreateSongProps {
   onClose: () => void;
   onSave: () => void;
 }
 
+// The main CreateSong component
 const CreateSong = ({ onClose, onSave }: CreateSongProps) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
